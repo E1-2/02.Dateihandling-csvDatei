@@ -51,7 +51,7 @@ int dateiErstellen(buch* db, int anzahl) {
 	ofstream datei;
 
 	datei.open(dateiname, ios::out);
-	if (!datei)
+	if (!datei.is_open())
 	{
 		cout << "Dateifehler beim Einlesen!" << endl;
 		return 0;
